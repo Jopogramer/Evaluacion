@@ -1,4 +1,3 @@
-// scoreboard.component.ts
 import { Component } from '@angular/core';
 import { Connect4Service } from '../conecta4-service';
 
