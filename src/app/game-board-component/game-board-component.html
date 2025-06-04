@@ -7,3 +7,18 @@
     </app-cell>
   </div>
 </div>
+
+<div class="inputs">
+  <label for="input1">Jugador 1:</label>
+  <input id="input1" type="text" [(ngModel)]="jugador1">
+
+  <label for="input2">Jugador 2:</label>
+  <input id="input2" type="text" [(ngModel)]="jugador2">
+
+  <button (click)="guardarDatos()">Guardar Datos</button>
+</div>
+
+<div class="game-info">
+  <p>Turno: {{ turno }}</p>
+  <p *ngIf="ganador">Ganador: {{ ganador }}</p>
+  <button (click)="reiniciarJuego()">Reiniciar Juego</button>

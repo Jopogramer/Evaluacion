@@ -3,11 +3,12 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class Connect4Service {
-  readonly ROWS = 6;
-  readonly COLS = 7;
+  readonly ROWS = 5;
+  readonly COLS = 5;
   board: number[][] = [];
   currentPlayer: number = 1;
   winner: number = 0;
+  private turn: string = 'jugador1'; 
 
   constructor() {
     this.resetGame();
@@ -61,4 +62,8 @@ export class Connect4Service {
   getWinner() {
     return this.winner;
   }
+  getTurn(): string {
+    return this.currentPlayer === 1 ? 'jugador1' : 'jugador2';
+  }
+
 }
