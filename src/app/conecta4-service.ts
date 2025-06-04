@@ -8,7 +8,7 @@ export class Connect4Service {
   board: number[][] = [];
   currentPlayer: number = 1;
   winner: number = 0;
-  private turn: string = 'jugador1'; 
+  private turn: string = 'jugador1';
 
   constructor() {
     this.resetGame();

@@ -20,5 +20,6 @@
 
 <div class="game-info">
   <p>Turno: {{ turno }}</p>
-  <p *ngIf="ganador">Ganador: {{ ganador }}</p>
+  <p *ngIf="ganador">Ganador: {{ ganador === 'jugador1' ? jugador1 : ganador === 'jugador2' ? jugador2 : ganador }}</p>
   <button (click)="reiniciarJuego()">Reiniciar Juego</button>
+</div>
