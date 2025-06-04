@@ -1,0 +1,6 @@
+<!-- scoreboard.component.html -->
+<div class="scoreboard">
+  <p *ngIf="!winner">Turno de: Jugador {{ currentPlayer }}</p>
+  <p *ngIf="winner">🎉 ¡Jugador {{ winner }} gana!</p>
+  <button (click)="reset()">Nuevo juego</button>
+</div>

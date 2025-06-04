@@ -1,0 +1,25 @@
+<!-- game-board.component.html -->
+<div class="board">
+  <div *ngFor="let row of board; let rowIndex = index" class="row">
+    <app-cell *ngFor="let cell of row; let colIndex = index"
+      [value]="cell"
+      (click)="makeMove(colIndex)">
+    </app-cell>
+  </div>
+</div>
+
+<div class="inputs">
+  <label for="input1">Jugador 1:</label>
+  <input id="input1" type="text" [(ngModel)]="jugador1">
+
+  <label for="input2">Jugador 2:</label>
+  <input id="input2" type="text" [(ngModel)]="jugador2">
+
+  <button (click)="guardarDatos()">Guardar Datos</button>
+</div>
+
+<div class="game-info">
+  <p>Turno: {{ turno }}</p>
+  <p *ngIf="ganador">Ganador: {{ ganador === 'jugador1' ? jugador1 : ganador === 'jugador2' ? jugador2 : ganador }}</p>
+  <button (click)="reiniciarJuego()">Reiniciar Juego</button>
+</div>

@@ -1,0 +1,9 @@
+/* cell.component.css */
+.cell {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.cell.player1 { background-color: red; }
+.cell.player2 { background-color: yellow; }
